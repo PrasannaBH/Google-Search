@@ -46,8 +46,8 @@ const baseUrl = "https://google-search3.p.rapidapi.com/api/v1";
 
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
-  const [isloading, setIsLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [isloading, setIsLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("JS Mastery");
 
   const getResults = async (url) => {
     setIsLoading(true);
@@ -62,7 +62,18 @@ export const ResultContextProvider = ({ children }) => {
 
     const data = await res.json();
 
-    setResults(data);
+    // console.log({ url, data });
+    if (url.includes("/news")) {
+      setResults(data.entries);
+    } else if (url.includes("/image")) {
+      setResults(data.image_results);
+    } else {
+      setResults(data.results);
+    }
+
+    // console.log(data);
+
+    // setResults(data);
     setIsLoading(false);
   };
 
