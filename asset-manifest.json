@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Google-Search/static/css/main.b7c9d867.css",
+    "main.js": "/Google-Search/static/js/main.267cde3a.js",
+    "index.html": "/Google-Search/index.html",
+    "main.b7c9d867.css.map": "/Google-Search/static/css/main.b7c9d867.css.map",
+    "main.267cde3a.js.map": "/Google-Search/static/js/main.267cde3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7c9d867.css",
+    "static/js/main.267cde3a.js"
+  ]
+}
