@@ -47,7 +47,7 @@ const baseUrl = "https://google-search3.p.rapidapi.com/api/v1";
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
   const [isloading, setIsLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("JS Mastery");
+  const [searchTerm, setSearchTerm] = useState("elon musk");
 
   const getResults = async (url) => {
     setIsLoading(true);
@@ -56,7 +56,7 @@ export const ResultContextProvider = ({ children }) => {
       method: "GET",
       headers: {
         "x-rapidapi-host": "google-search3.p.rapidapi.com",
-        "x-rapidapi-key": "58633e0a85msh3d55deecfbf99f6p1f3c98jsn8184c535c83c",
+        "x-rapidapi-key": process.env.REACT_APP_API_KEY,
       },
     });
 
